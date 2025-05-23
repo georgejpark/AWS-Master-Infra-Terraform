@@ -79,6 +79,25 @@ This means that before you use this terraform module, you will need to:
 * [Terraform module for AWS Lambda function using AWS Landing Zone reader](https://github.com/MitocGroup/terraform-aws-landing-zone/tree/master/examples/example_landing_zone_reader)
 
 
+## Managing Secrets
+
+Use the optional `ssm_parameters` variable to create AWS Systems Manager
+parameters alongside your landing zone. Each map key represents the
+parameter name while the value defines its attributes.
+
+Example `terraform.tfvars`:
+
+```hcl
+ssm_parameters = {
+  "/myapp/db_password" = {
+    value       = "supersecret"
+    type        = "SecureString"
+    description = "Database password"
+  }
+}
+```
+
+
 ## What Components Are Available
 AWS Landing Zone solution is defined by the following strategy:
 1. [Multi-Account Structure](#multi-account-structure)

@@ -22,3 +22,10 @@ variable "terraform_config" {
   default     = true
   description = "The command that will be generate the `terraform` config file."
 }
+
+variable "ssm_parameters" {
+  type        = map(map(string))
+  description = "Map of SSM parameter configurations keyed by parameter name."
+  default     = {}
+}
+
