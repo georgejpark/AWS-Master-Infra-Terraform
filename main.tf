@@ -6,3 +6,9 @@ module "landing_zone" {
   terraform_backend       = var.terraform_backend
   terraform_config        = var.terraform_config
 }
+
+module "ssm_parameters" {
+  source                 = "./modules/ssm_parameters"
+  landing_zone_providers = var.landing_zone_providers
+  ssm_parameters         = var.ssm_parameters
+}

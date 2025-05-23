@@ -582,3 +582,13 @@ output "landing_zone_guardduty_member_relationship_statuses" {
   value       = lookup(module.landing_zone.landing_zone, "landing_zone_guardduty_member_relationship_statuses", "Is not set!")
   description = "The statuses of the relationship between the member account and its master account."
 }
+
+output "ssm_parameter_arns" {
+  value       = module.ssm_parameters.parameter_arns
+  description = "ARNs of created SSM parameters."
+}
+
+output "ssm_parameter_names" {
+  value       = module.ssm_parameters.parameter_names
+  description = "Names of created SSM parameters."
+}
