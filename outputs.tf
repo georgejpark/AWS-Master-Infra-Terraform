@@ -592,3 +592,28 @@ output "ssm_parameter_names" {
   value       = module.ssm_parameters.parameter_names
   description = "Names of created SSM parameters."
 }
+
+output "eks_cluster_name" {
+  value       = try(module.eks[0].cluster_name, null)
+  description = "Name of the EKS cluster."
+}
+
+output "eks_cluster_endpoint" {
+  value       = try(module.eks[0].cluster_endpoint, null)
+  description = "Endpoint of the EKS cluster."
+}
+
+output "eks_node_group_arn" {
+  value       = try(module.eks[0].node_group_arn, null)
+  description = "ARN of the EKS node group."
+}
+
+output "ecr_repository_url" {
+  value       = try(module.ecr[0].repository_url, null)
+  description = "URL of the ECR repository."
+}
+
+output "ecr_repository_arn" {
+  value       = try(module.ecr[0].repository_arn, null)
+  description = "ARN of the ECR repository."
+}
