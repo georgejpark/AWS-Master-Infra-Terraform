@@ -10,7 +10,7 @@ RELATED: [terraform module `landing_zone_reader`](https://github.com/MitocGroup/
 > NOTE: Current implementation is fully compatible with terraform v0.12+.
 Switch to branch `terraform_v0.11` if you still using terraform v0.11.x and below.
 
-Quick Links: [How Does This Module Work](#how-does-this-module-work) | [What Components Are Available](#what-components-are-available) | [Why to Use This Solution](#why-to-use-this-solution)
+Quick Links: [How Does This Module Work](#how-does-this-module-work) | [What Components Are Available](#what-components-are-available) | [Why to Use This Solution](#why-to-use-this-solution) | [Network Service Topology](docs/network_service_topology.md)
 
 
 ## How Does This Module Work
